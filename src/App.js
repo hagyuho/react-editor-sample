@@ -3,6 +3,7 @@ import DraftPage from "./pages/DraftPage/index.tsx";
 import "./App.css";
 import ReactInputPage from "./pages/ReactInputPage/index.tsx";
 import CKeditorPage from "./pages/CKeditorPage/index.tsx";
+import CraftPage from "./pages/CraftPage/index.tsx";
 
 function App() {
   const navigate = useNavigate();
@@ -22,11 +23,15 @@ function App() {
         <button className="tab" onClick={() => movePage("ckeditor")}>
           ckeditor
         </button>
+        <button className="tab" onClick={() => movePage("crafteditor")}>
+          crafteditor
+        </button>
       </div>
       <Routes>
         <Route path="reactinput" element={<ReactInputPage />} />
         <Route path="draft" element={<DraftPage />} />
         <Route path="ckeditor" element={<CKeditorPage />} />
+        <Route path="crafteditor" element={<CraftPage />} />
       </Routes>
     </div>
   );
