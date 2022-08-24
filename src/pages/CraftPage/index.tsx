@@ -14,12 +14,9 @@ import { Editor, Frame, Element } from "@craftjs/core";
 const CraftPage = () => {
   return (
     <div style={{ margin: "0 auto", width: "800px" }}>
-      <Typography variant="h5" align="center">
-        A super simple page editor
-      </Typography>
       <Editor resolver={{ Card, Button, Text, Container, CardBottom, CardTop }}>
+        <Topbar />
         <Grid container spacing={3} style={{ paddingTop: "10px" }}>
-          <Topbar />
           <Grid item xs>
             <Frame>
               <Element is={Container} padding={5} background="#eee" canvas>
